@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const baseURL = "https://generativelanguage.googleapis.com/v1beta";
-const apiKey = "AIzaSyBQuhO902O-DzW2p5P2Vtm8qE060JQVhjg";
+const apiKey = "AIzaSyCfmu-PMGP2ZuKlgRMEWNa0m9feROp0uG8";
 
 export const bluetoothDeviceComparison = async (products = []) => {
 
