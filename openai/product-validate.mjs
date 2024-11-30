@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const baseURL = "https://generativelanguage.googleapis.com/v1beta";
-const apiKey = "AIzaSyCc4SFyBjoQqf9Y4my5lcpxYE5OwlVldao";
+const apiKey = "AIzaSyDkhvjalwrg77h_w4EAgd3K4m2jsHHE_Ko";
 
 export const productvalidator = async (productType, brand, productName) => {
   try {
