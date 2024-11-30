@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 const baseURL = "https://generativelanguage.googleapis.com/v1beta";
-const apiKey = "AIzaSyDFyJFMqS_kXV5Src3w2GHa39EAVknbywg";
+const apiKey = "AIzaSyCfmu-PMGP2ZuKlgRMEWNa0m9feROp0uG8";
 
 export const smartphoneComparison = async (products = []) => {
 
