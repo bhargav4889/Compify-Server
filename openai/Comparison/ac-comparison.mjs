@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const baseURL = "https://generativelanguage.googleapis.com/v1beta";
-const apiKey = "AIzaSyCfmu-PMGP2ZuKlgRMEWNa0m9feROp0uG8";
+const apiKey = "AIzaSyBokiBf88MqNV23hBnZFfhhF05Um6oVlCs";
 
 export const airConditionerComparison = async (products = []) => {
 
