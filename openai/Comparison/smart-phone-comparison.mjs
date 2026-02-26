@@ -70,12 +70,7 @@ Important:
           {
             parts: [{ text: prompt }]
           }
-        ],
-        generationConfig: {
-          temperature: 0.3,
-          responseMimeType: "application/json",
-          maxOutputTokens: 4096
-        }
+        ]
       },
       {
         headers: {
@@ -109,3 +104,4 @@ Important:
     return [];
   }
 };
+
