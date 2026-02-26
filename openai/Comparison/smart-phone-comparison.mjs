@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 const baseURL = "https://generativelanguage.googleapis.com/v1beta";
-const apiKey = "AIzaSyDZ2BLUoAbqFHixj0nLdnzazq9Q4sfnJd8";
+const apiKey = "AIzaSyA-v1MKb02ta6NI9ErraqbvxjOI_CEn3jU";
 
 export const smartphoneComparison = async (products = []) => {
 
@@ -110,15 +110,22 @@ export const smartphoneComparison = async (products = []) => {
 
 try {
   const response = await axios.post(
-      `${baseURL}/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`,
-      { 
-          
-          contents: [{ parts: [{ text: promptforTwoProduct }] }]
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent",
+      {
+        contents: [
+          {
+            parts: [{ text: promptforTwoProduct }]
+          }
+        ]
       },
       {
-          headers: { 'Content-Type': 'application/json' }
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": apiKey
+        },
+        timeout: 10000
       }
-  );
+    );
 
 
   let aiResponse = response.data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
@@ -296,15 +303,22 @@ The final output should look like this:
 
 try {
   const response = await axios.post(
-      `${baseURL}/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`,
-      { 
-          
-          contents: [{ parts: [{ text: promptforThreeProducts }] }]
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent",
+      {
+        contents: [
+          {
+            parts: [{ text: promptforThreeProducts }]
+          }
+        ]
       },
       {
-          headers: { 'Content-Type': 'application/json' }
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": apiKey
+        },
+        timeout: 10000
       }
-  );
+    );
 
 
   let aiResponse = response.data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
@@ -494,16 +508,23 @@ The final output should look like this:
 `;
 
 try {
-  const response = await axios.post(
-      `${baseURL}/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`,
-      { 
-          
-          contents: [{ parts: [{ text: promptforFourProducts }] }]
+const response = await axios.post(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent",
+      {
+        contents: [
+          {
+            parts: [{ text: promptforFourProducts }]
+          }
+        ]
       },
       {
-          headers: { 'Content-Type': 'application/json' }
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": apiKey
+        },
+        timeout: 10000
       }
-  );
+    );
 
 
   let aiResponse = response.data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
@@ -520,4 +541,3 @@ try {
 }
 }
 };
-
