@@ -1,13 +1,9 @@
 // smartphone-comparison.mjs
 
 import axios from "axios";
-import https from "https";
 
 const apiKey = "AIzaSyB75aUE2CnMBvF19Yl0GBO9s_hRwioHKz0";
 
-const agent = new https.Agent({
-  keepAlive: true
-});
 
 export const smartphoneComparison = async (products = []) => {
   if (!Array.isArray(products) || products.length < 2) {
@@ -76,9 +72,7 @@ Important:
         headers: {
           "Content-Type": "application/json",
           "x-goog-api-key": apiKey
-        },
-        httpsAgent: agent,
-        timeout: 30000
+        }
       }
     );
 
@@ -104,5 +98,6 @@ Important:
     return [];
   }
 };
+
 
 
