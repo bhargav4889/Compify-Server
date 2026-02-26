@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseURL = "https://generativelanguage.googleapis.com/v1";
-const apiKey = "AIzaSyA-v1MKb02ta6NI9ErraqbvxjOI_CEn3jU";
+const apiKey = "AIzaSyDqMVwzZbfPVpUhqNuprMLOpaoOVsIpVuk";
 
 if (!apiKey) {
   throw new Error("GEMINI_API_KEY is missing in .env file");
@@ -87,5 +87,6 @@ export const productvalidator = async (productType, brand, productName) => {
     return false;
   }
 };
+
 
 
