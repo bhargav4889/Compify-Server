@@ -48,22 +48,19 @@ export const productvalidator = async (productType, brand, productName) => {
         return false;
     }
 
-    const response = await axios.post(
-      `${baseURL}/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+     const response = await axios.post(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent",
       {
         contents: [
           {
             parts: [{ text: prompt }]
           }
-        ],
-        generationConfig: {
-          temperature: 0,
-          maxOutputTokens: 10
-        }
+        ]
       },
       {
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "x-goog-api-key": apiKey
         },
         timeout: 10000
       }
@@ -90,4 +87,5 @@ export const productvalidator = async (productType, brand, productName) => {
     return false;
   }
 };
+
 
