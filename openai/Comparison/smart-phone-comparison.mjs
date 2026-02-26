@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 const baseURL = "https://generativelanguage.googleapis.com/v1beta";
-const apiKey = "AIzaSyDqMVwzZbfPVpUhqNuprMLOpaoOVsIpVuk";
+const apiKey = "AIzaSyABdMN2cXUo8G9BjnB-ywEJbTAfTpmsYAE";
 
 export const smartphoneComparison = async (products = []) => {
 
@@ -541,4 +541,5 @@ const response = await axios.post(
 }
 }
 };
+
 
