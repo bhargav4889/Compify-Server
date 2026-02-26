@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseURL = "https://generativelanguage.googleapis.com/v1";
-const apiKey = "AIzaSyAsRbyDnIr0HtqPXPaNsMPKQ7anhGA9SKA";
+const apiKey = "AIzaSyDkuHoS6s5fZZKhSbSgMoxBh8FlcTz2YIQ";
 
 if (!apiKey) {
   throw new Error("GEMINI_API_KEY is missing in .env file");
@@ -49,7 +49,7 @@ export const productvalidator = async (productType, brand, productName) => {
     }
 
      const response = await axios.post(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent",
       {
         contents: [
           {
@@ -87,6 +87,7 @@ export const productvalidator = async (productType, brand, productName) => {
     return false;
   }
 };
+
 
 
 
