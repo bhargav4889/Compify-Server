@@ -1,10 +1,7 @@
 import axios from "axios";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const baseURL = "https://generativelanguage.googleapis.com/v1";
-const apiKey = process.env.GEMINI_API_KEY;
+const apiKey = "AIzaSyA-v1MKb02ta6NI9ErraqbvxjOI_CEn3jU";
 
 if (!apiKey) {
   throw new Error("GEMINI_API_KEY is missing in .env file");
@@ -93,3 +90,4 @@ export const productvalidator = async (productType, brand, productName) => {
     return false;
   }
 };
+
