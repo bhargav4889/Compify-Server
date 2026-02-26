@@ -60,7 +60,7 @@ Important:
 `;
 
     const response = await axios.post(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent",
       {
         contents: [
           {
@@ -75,7 +75,6 @@ Important:
         }
       }
     );
-
     const aiText =
       response.data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
 
@@ -98,6 +97,7 @@ Important:
     return [];
   }
 };
+
 
 
 
