@@ -122,8 +122,7 @@ try {
         headers: {
           "Content-Type": "application/json",
           "x-goog-api-key": apiKey
-        },
-        timeout: 10000
+        }
       }
     );
 
@@ -315,8 +314,7 @@ try {
         headers: {
           "Content-Type": "application/json",
           "x-goog-api-key": apiKey
-        },
-        timeout: 10000
+        }
       }
     );
 
@@ -521,8 +519,7 @@ const response = await axios.post(
         headers: {
           "Content-Type": "application/json",
           "x-goog-api-key": apiKey
-        },
-        timeout: 10000
+        }
       }
     );
 
@@ -541,5 +538,6 @@ const response = await axios.post(
 }
 }
 };
+
 
 
