@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const apiKey = "AIzaSyB75aUE2CnMBvF19Yl0GBO9s_hRwioHKz0";
+const apiKey = "AIzaSyAsRbyDnIr0HtqPXPaNsMPKQ7anhGA9SKA";
 
 
 export const smartphoneComparison = async (products = []) => {
@@ -97,6 +97,7 @@ Important:
     return [];
   }
 };
+
 
 
 
